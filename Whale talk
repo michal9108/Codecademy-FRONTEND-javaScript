@@ -1,0 +1,20 @@
+const input = 'turpentine and turtles';
+const arrayVowels = ['a','e','i','o','u'];
+const resultArray = [];
+for (let i = 0; i < input.length; i++) {
+  //console.log('Number of characters is '+i);
+     
+  for (let j = 0; j < arrayVowels.length; j++)
+  //console.log('j  is '+j);
+   {  
+     if (input[i] === arrayVowels[j]) {
+       if (input[i] === 'e' || input[i] === 'u') {
+     resultArray.push('ee', 'uu');
+      }  else {
+        resultArray.push(input[i]);
+      }
+      }
+     }
+   };
+ 
+console.log(resultArray.join("").toUpperCase());
